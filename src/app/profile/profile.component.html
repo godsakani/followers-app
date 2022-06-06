@@ -1,0 +1,12 @@
+<div class="container m-5">
+    <h1 class="xl my-5">My Followers</h1>
+    <div class="row" *ngFor="let Followers of follows" >
+        <div class="col-1">
+          <img class="rounded-circle   pb-2 " style="width:100%" data-holder-rendered="true"  src="{{Followers.avatar_url}}">
+        </div>
+        <div class="col">
+            <a [routerLink]="['/followers', Followers.login,Followers.id]">{{ Followers.login}}</a><br>
+            <a href="">{{Followers.html_url}}</a>
+        </div>
+    </div>
+</div>
